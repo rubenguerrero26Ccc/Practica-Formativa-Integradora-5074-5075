@@ -1,0 +1,4 @@
+SHA-256 telemetria_envios.csv (original): 4471c18a0284b3aa5b32a0713e691e3c7fcadae402f105e901c7c57f49474911
+SHA-256 de referencia (enunciado)       : 4471c18a0284b3aa5b32a0713e691e3c7fcadae402f105e901c7c57f49474911
+Coincide con la referencia              : True
+SHA-256 telemetria_limpia.csv (nuevo)    : f7af6b30a4067ea69c553a47db90d133380a9127224bf0c1fce830ddca58afae

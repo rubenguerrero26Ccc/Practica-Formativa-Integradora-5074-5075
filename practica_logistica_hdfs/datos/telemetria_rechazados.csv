@@ -1,0 +1,9 @@
+id_envio,id_vehiculo,timestamp_lectura,origen,destino,peso_kg,temp_celsius,latitud,longitud,estado_envio,motivo_rechazo
+ENV-2026-1015,VEH-SE-559,2026-11-05 09:11:00,HUB-Sevilla-Norte,HUB-Zaragoza-Plaza,677.1,,36.61466,-1.05705,EN_REPARTO,nulo_temp_celsius
+ENV-2026-1012,VEH-CA-513,2026-11-03 00:40:00,HUB-Sevilla-Norte,HUB-Bilbao-Logistics,173.08,3.9,38.93299,-1.63824,ENTREGADO,duplicado_exacto
+ENV-2026-1067,VEH-CA-747,2026-11-04 23:33:00,HUB-Cádiz-Bahía,HUB-Madrid-Sur,,6.0,40.40107,-2.9629,INCIDENCIA_REPARTO,nulo_peso_kg
+ENV-2026-1088,VEH-CO-866,2026-11-08 05:06:00,HUB-Sevilla-Norte,HUB-Madrid-Sur,-45.5,5.0,40.76545,-1.62471,ENTREGADO,peso_no_positivo
+ENV-2026-1078,VEH-CA-602,2026-11-03 11:48:00,HUB-Sevilla-Norte,HUB-Bilbao-Logistics,508.58,2.7,36.68144,-3.79317,EN_TRANSITO,duplicado_exacto
+ENV-2026-1142,VEH-CO-737,2026-11-06 20:30:00,HUB-Sevilla-Norte,HUB-Valencia-Port,274.32,98.4,41.39031,-5.76116,ENTREGADO,temperatura_fuera_de_rango
+ENV-2026-1189,VEH-CA-353,2026-11-04 18:43:00,HUB-Sevilla-Norte,,200.89,4.4,39.49056,-5.32973,EN_TRANSITO,nulo_destino
+ENV-2026-1210,VEH-MA-464,2026-11-03 13:00:00,HUB-Cádiz-Bahía,HUB-Barcelona-ZAL,109.7,1.7,39.9343,-3.36402,DESCONOCIDO_ERROR,estado_invalido

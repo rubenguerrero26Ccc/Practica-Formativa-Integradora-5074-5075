@@ -1,0 +1,36 @@
+services:
+  hadoop:
+    image: apache/hadoop:3.4.0
+    container_name: hadoop-lab
+    hostname: hadoop-lab
+    user: root
+    ports:
+      - "9870:9870"
+      - "8088:8088"
+    environment:
+      HDFS_NAMENODE_USER: root
+      HDFS_DATANODE_USER: root
+      HDFS_SECONDARYNAMENODE_USER: root
+      YARN_RESOURCEMANAGER_USER: root
+      YARN_NODEMANAGER_USER: root
+      CORE-SITE.XML_fs.defaultFS: hdfs://hadoop-lab:9000
+      HDFS-SITE.XML_dfs.replication: "1"
+      HDFS-SITE.XML_dfs.permissions.enabled: "false"
+      MAPRED-SITE.XML_mapreduce.framework.name: yarn
+      YARN-SITE.XML_yarn.resourcemanager.hostname: hadoop-lab
+      YARN-SITE.XML_yarn.nodemanager.aux-services: mapreduce_shuffle
+      YARN-SITE.XML_yarn.nodemanager.vmem-check-enabled: "false"
+    command:
+      - bash
+      - -c
+      - >
+        if [ ! -d /tmp/hadoop-root/dfs/name/current ]; then
+        hdfs namenode -format -nonInteractive -force;
+        fi;
+        hdfs --daemon start namenode;
+        hdfs --daemon start datanode;
+        yarn --daemon start resourcemanager;
+        yarn --daemon start nodemanager;
+        tail -f /dev/null
+    volumes:
+      - ./datos:/workspace
